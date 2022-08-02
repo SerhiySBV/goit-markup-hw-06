@@ -804,6 +804,7 @@ img {
 /* Modal-form */
 
 .modal-title {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15em;
@@ -835,27 +836,84 @@ img {
 .modal-form-input {
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-.modal-form-input-coment::placeholder {
-  margin-bottom: 4px;
+.modal-form-input-coment {
   width: 100%;
   height: 120px;
-  font-size: 12px;
-  line-height: 1.17em;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
+}
+.modal-form-input-coment:hover,
+.modal-form-input-coment:focus {
+  border-color: var(--accent-txt-cl);
+  outline-color: var(--accent-txt-cl);
+}
+.modal-form-input-coment::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-group-checkbox {
+.modal-checbox {
   display: flex;
-  gap: 9px;
+  justify-content: center;
   margin-bottom: 30px;
- }
-.modal-form-text-checkbox-link {
-  text-decoration: underline;
-  color: var(--accent-txt-cl);
 }
+.modal-checkbox__group {
+  display: flex;
+  align-items: center;
+}
+.modal-form__text--link {
+  color: var(--accent-txt-cl);
+  margin-left: 4px;
+  text-decoration: underline;
+}
+.modal-checkbox__input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.modal-checkbox__input {
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+}
+
+.modal-form__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.modal-btn-icon {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+
+  transition: var(--animation);
+}
+
+/*
+.checkbox-input:checked + .icon-checkbox {
+  background-image: url(../imges/modal_svg/vector.svg);
+} */
