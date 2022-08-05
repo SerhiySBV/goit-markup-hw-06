@@ -977,7 +977,7 @@ img {
   color: var(--main-white);
   margin-bottom: 20px;
 }
-.subscribe {
+.subscribe-form {
   display: flex;
   align-items: center;
 }
