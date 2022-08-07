@@ -82,6 +82,8 @@ img {
 }
 .header {
   background-color: var(--main-white);
+  max-width: 1600px;
+  margin: auto;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -340,10 +342,10 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
-.about-section {
+.about {
   padding: 94px 0;
 }
-.about-item-title {
+.about__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14em;
@@ -351,27 +353,26 @@ img {
   text-transform: uppercase;
 
   color: #212121;
+
+  margin-bottom: 10px;
 }
-.about-item-text {
+.about__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71em;
 
   letter-spacing: 0.03em;
 }
-.about-list {
+.about__list {
   display: flex;
   gap: 30px;
 }
-.about-item {
+.about__item {
   width: 270px;
-}
-.about-item-title {
-  margin-bottom: 10px;
 }
 
 /* Icons */
-.about-item::before {
+.about__item::before {
   display: block;
   content: '';
   height: 120px;
@@ -380,16 +381,16 @@ img {
   background-color: #f5f4fa;
   margin-bottom: 30px;
 }
-.about-item:nth-child(1)::before {
+.about__item:nth-child(1)::before {
   background-image: url(../images/icons/edit-icon/antenna.svg);
 }
-.about-item:nth-child(2)::before {
+.about__item:nth-child(2)::before {
   background-image: url(../images/icons/edit-icon/clock.svg);
 }
-.about-item.about-item:nth-child(3)::before {
+.about__item.about__item:nth-child(3)::before {
   background-image: url(../images/icons/edit-icon/diagram.svg);
 }
-.about-item.about-item:nth-child(4)::before {
+.about__item.about__item:nth-child(4)::before {
   background-image: url(../images/icons/edit-icon/astronaut.svg);
 }
 
@@ -443,7 +444,7 @@ img {
 /* Text decoration */
 .teem-section {
   background: #f5f4fa;
-  width: 1600px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -832,8 +833,8 @@ img {
   padding-top: 40px;
   margin-bottom: 12px;
 }
-.form {
-  display: block;
+
+.modal {
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -925,10 +926,13 @@ img {
   margin-bottom: 30px;
 }
 .checkbox__group {
-  display: inline-block;
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   transform: background-image var(--animation);
+  width: 425px;
+  height: 24px;
 }
 .checkbox__text--link {
   color: var(--accent-txt-cl);
@@ -947,13 +951,25 @@ img {
   clip-path: inset(50%);
   margin: -1px;
   margin-right: 8px;
-  transform: background-image var(--animation);
+}
+.checkbox__text,
+.checkbox__text--link {
+  font-size: 14px;
+  line-height: 1.17em;
+  letter-spacing: 0.03em;
+}
+.checkbox__input:hover + .checkbox__icon {
+  border: 2px solid var(--accent-txt-cl);
+  border-radius: 2px;
+  transform: border-color var(--animation);
 }
 .checkbox__icon {
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  background-image: url(../images/icons/form-icons/border.svg);
+  border: 2px solid var(--dark-bg-cl);
+  border-radius: 2px;
+  transition: var(--animation);
 }
 .checkbox__input:checked + .checkbox__icon {
   background-color: var(--accent-txt-cl);
@@ -961,12 +977,14 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 2px;
+  background-origin: border-box;
   transform: background-color var(--animation);
   transform: background-image var(--animation);
+  border-color: transparent;
 }
 /* Footer form */
-.subscribe-box__title {
-  display: inline-block;
+.subscribe__title {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -977,8 +995,9 @@ img {
   margin-bottom: 20px;
 }
 .subscribe-form {
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: 570px;
+  height: 86px;
 }
 .subscribe-form__input {
   width: 358px;
@@ -991,12 +1010,14 @@ img {
   outline: var(--accent-txt-cl);
   background-color: transparent;
   transition: border var(--animation);
+  color: var(--main-txt-cl);
 }
 .subscribe-form__input::placeholder {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
 }
+
 .subscribe-form__input:hover,
 .subscribe-form__input:focus {
   border-color: var(--accent-txt-cl);
@@ -1006,17 +1027,18 @@ img {
 /* Subscribe btn */
 
 .btn-mode-blue--subscribe {
+  position: absolute;
   width: 200px;
   height: 50px;
+  bottom: 0;
+  right: 0;
 }
 .subscribe-btn__txt {
   position: absolute;
   top: 10px;
   left: 28px;
 }
-.subscribe-btn {
-  position: relative;
-}
+
 .subscribe-btn__icon {
   position: absolute;
   align-items: center;
