@@ -82,8 +82,6 @@ img {
 }
 .header {
   background-color: var(--main-white);
-  max-width: 1600px;
-  margin: auto;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -444,9 +442,6 @@ img {
 /* Text decoration */
 .teem-section {
   background: #f5f4fa;
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .teem-title {
   font-weight: 700;
@@ -587,9 +582,6 @@ img {
 /*Footer logo */
 .footer {
   background: #2f303a;
-  width: 1600px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .footer-logo {
   font-family: 'Raleway';
@@ -958,7 +950,8 @@ img {
   line-height: 1.17em;
   letter-spacing: 0.03em;
 }
-.checkbox__input:hover + .checkbox__icon {
+.checkbox__input:hover + .checkbox__icon,
+.checkbox__input:focus + .checkbox__icon {
   border: 2px solid var(--accent-txt-cl);
   border-radius: 2px;
   transform: border-color var(--animation);
