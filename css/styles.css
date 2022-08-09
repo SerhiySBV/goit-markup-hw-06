@@ -385,10 +385,10 @@ img {
 .about__item:nth-child(2)::before {
   background-image: url(../images/icons/edit-icon/clock.svg);
 }
-.about__item.about__item:nth-child(3)::before {
+.about__item:nth-child(3)::before {
   background-image: url(../images/icons/edit-icon/diagram.svg);
 }
-.about__item.about__item:nth-child(4)::before {
+.about__item:nth-child(4)::before {
   background-image: url(../images/icons/edit-icon/astronaut.svg);
 }
 
